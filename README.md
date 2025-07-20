@@ -68,9 +68,11 @@ Contributions are welcome! If you have suggestions on additonal snippets reach o
 
 ### Run And Test Extension Locally
 
-1. Press `F5` to open a new window.
-2. Create a new file with a file name suffix matching languages, which are `.js` and `.ts`.
-3. Verify that your snippet(s) are proposed on IntelliSense.
+1. Clone repository.
+2. `cd` into repository.
+3. Press `F5` to open a new window.
+4. Create a new file with a file name suffix matching languages, which are `.js` and `.ts`.
+5. Verify that your snippet(s) are proposed on IntelliSense.
 
 ### Make Changes
 
