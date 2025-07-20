@@ -9,7 +9,7 @@
       "type": "git",
       "url": "https://github.com/brysonbw/vscode-lit-component-snippets"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.102.0"
   },
