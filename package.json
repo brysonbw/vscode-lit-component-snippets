@@ -1,0 +1,68 @@
+{
+  "name": "lit-component-snippets",
+  "displayName": "Lit Component Snippets",
+  "description": "Lit component snippets for VS Code",
+  "license": "MIT",
+  "publisher": "brysonbw",
+  "icon": "icons/lit-component-snippets-icon.png",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "lit",
+    "lit components",
+    "lit web components",
+    "lit web component snippets",
+    "lit component snippets",
+    "snippets",
+    "lit snippets"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "javascript",
+        "aliases": [
+          "Lit",
+          "Lit Component Snippets",
+          "lit component snippets",
+          "Lit Web Component Snippets",
+          "lit web component snippets"
+        ],
+        "filenamePatterns": [
+          "*.js"
+        ]
+      },
+      {
+        "id": "typescript",
+        "aliases": [
+          "Lit",
+          "Lit Component Snippets",
+          "lit component snippets",
+          "Lit Web Component Snippets",
+          "lit web component snippets"
+        ],
+        "filenamePatterns": [
+          "*.ts"
+        ]
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/lit-javascript.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/lit-javascript-with-jsdoc.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/lit-typescript.json"
+      }
+    ]
+  }
+}

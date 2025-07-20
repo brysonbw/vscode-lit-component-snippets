@@ -1,0 +1,105 @@
+{
+ "Lit Web Component": {
+  "prefix": "litwc",
+  "body": [
+    "import { LitElement, css, html, type TemplateResult } from 'lit';",
+    "import { customElement, property } from 'lit/decorators.js';",
+    "",
+    "@customElement('${2:${TM_FILENAME_BASE/[^a-z-]//gi}}')",
+    "export class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends LitElement {",
+    "  @property()",
+    "  ${3:name}${4:?}: ${5:string = '${TM_FILENAME_BASE/[^a-z-]//gi}'};",
+    "",
+    "  render(): TemplateResult {",
+    "    return html`<${6:div}>${this.${3:name}} works!$0</${6:div}>`;",
+    "  }",
+    "",
+    "  static styles = css`",
+    "    :host {",
+    "      ${7:color: #1e90ff;}",
+    "    }",
+    "  `;",
+    "}",
+    "",
+    "declare global {",
+    "  interface HTMLElementTagNameMap {",
+    "    '${2:${TM_FILENAME_BASE/[^a-z-]//gi}}': ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};",
+    "  }",
+    "}"
+  ],
+  "description": "Lit Web Component in Typescript"
+ },
+ "Lit Web Component Lifecycle: connectedCallback()": {
+  "prefix": "litwclccc",
+  "body": [
+    "connectedCallback(): void {",
+    "  ${1:super.connectedCallback();}",
+    "  ${2:window.addEventListener('${3:keydown}', this.${4:_handleKeydown});}$0",
+    "}"
+  ],
+  "description": "Lit Web Component Lifecycle: connectedCallback() in Typescript"
+ },
+  "Lit Web Component Lifecycle: disconnectedCallback()": {
+  "prefix": "litwclcdc",
+  "body": [
+    "disconnectedCallback(): void {",
+    "  ${1:super.disconnectedCallback();}",
+    "  ${2:window.removeEventListener('${3:keydown}', this.${4:_handleKeydown});}$0",
+    "}"
+  ],
+  "description": "Lit Web Component Lifecycle: disconnectedCallback() in Typescript"
+ },
+ "Lit Web Component Lifecycle: firstUpdated()": {
+  "prefix": "litwclcfu",
+  "body": [
+    "firstUpdated(): void {",
+    "  ${1:console.log('firstUpdated() invoked!');}$0",
+    "}"
+  ],
+  "description": "Lit Web Component Lifecycle: firstUpdated() in Typescript"
+ },
+ "Lit Web Component Lifecycle: updated()": {
+  "prefix": "litwclcu",
+  "body": [
+    "updated(changedProperties: Map<${1:string}, ${1:unknown}>): void {",
+    "  ${3:console.log('updated() invoked!', changedProperties);}$0",
+    "}"
+  ],
+  "description": "Lit Web Component Lifecycle: updated() in Typescript"
+ },
+ "Lit Web Component Lifecycle: render()": {
+  "prefix": "litwclcr",
+  "body": [
+    "render(): TemplateResult {",
+    "  return html`<${1:div}>${2:${TM_FILENAME_BASE/[^a-z-]//gi} works!}</${1:div}>`;$0",
+    "}"
+  ],
+  "description": "Lit Web Component Lifecycle: render() in Typescript"
+ },
+ "Lit Web Component Getter": {
+  "prefix": "litwcgetter",
+  "body": [
+    "get ${1:private} ${2:myElement}(): ${3:HTMLElement | null} {",
+    "  return ${4:this.renderRoot.${5:querySelector}('$0')};",
+    "}"
+  ],
+  "description": "Lit Web Component Getter in Typescript"
+ },
+ "Lit Web Component Method": {
+  "prefix": "litwcmethod",
+  "body": [
+    "${1:private }${2:onClick}(${3:event}: ${4:Event}): ${5:void} {",
+    "  console.log('${2:onClick} invoked!', ${3:event});$0",
+    "}"
+  ],
+  "description": "Lit Web Component Method in Typescript"
+ },
+ "Lit Web Component @state()": {
+  "prefix": "litwcinternalstate",
+  "body": [
+    "@state()",
+    "private _${1:active}: ${2:boolean} = ${3:false};$0"
+  ],
+  "description": "Lit Web Component Internal Reactive State in Typescript"
+ }
+}

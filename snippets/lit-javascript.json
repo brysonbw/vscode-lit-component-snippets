@@ -1,0 +1,106 @@
+{
+ "Lit Web Component": {
+  "prefix": "litwc",
+  "body": [
+    "import { LitElement, css, html } from 'lit';",
+    "",
+    "export class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends LitElement {",
+    "  static properties = {",
+    "    ${3:name}: { ${4:type: String} },",
+    "  };",
+    "",
+    "  constructor() {",
+    "    super();",
+    "    this.${3:name} = '${5:${TM_FILENAME_BASE/[^a-z-]//gi}}';",
+    "  }",
+    "",
+    "  render() {",
+    "    return html`<${6:div}>${this.${3:this.name}} works!$0</${6:div}>`;",
+    "  }",
+    "",
+    "  static styles = css`",
+    "    :host {",
+    "      ${7:color: #1e90ff;}",
+    "    }",
+    "  `;",
+    "}",
+    "",
+    "customElements.define('${2:${TM_FILENAME_BASE/[^a-z-]//gi}}', ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}});",
+    ""
+  ],
+  "description": "Lit Web Component in JavaScript"
+ },
+ "Lit Web Component Lifecycle: connectedCallback()": {
+  "prefix": "litwclccc",
+  "body": [
+    "connectedCallback() {",
+    "  ${1:super.connectedCallback();}",
+    "  ${2:window.addEventListener('${3:keydown}', this.${4:_handleKeydown});}$0",
+    "}"
+  ],
+  "description": "Lit Web Component Lifecycle: connectedCallback() in JavaScript"
+ },
+  "Lit Web Component Lifecycle: disconnectedCallback()": {
+  "prefix": "litwclcdc",
+  "body": [
+    "disconnectedCallback() {",
+    "  ${1:super.disconnectedCallback();}",
+    "  ${2:window.removeEventListener('${3:keydown}', this.${4:_handleKeydown});}$0",
+    "}"
+  ],
+  "description": "Lit Web Component Lifecycle: disconnectedCallback() in JavaScript"
+ },
+  "Lit Web Component Lifecycle: firstUpdated()": {
+  "prefix": "litwclcfu",
+  "body": [
+    "firstUpdated() {",
+    "  ${1:console.log('firstUpdated() invoked!');}$0",
+    "}"
+  ],
+  "description": "Lit Web Component Lifecycle: firstUpdated() in JavaScript"
+ },
+  "Lit Web Component Lifecycle: updated()": {
+  "prefix": "litwclcu",
+  "body": [
+    "updated(changedProperties) {",
+    "  ${4:console.log('updated() invoked!', changedProperties);}$0",
+    "}"
+  ],
+  "description": "Lit Web Component Lifecycle: updated() in JavaScript"
+ },
+ "Lit Web Component Lifecycle: render()": {
+  "prefix": "litwclcr",
+  "body": [
+    "render() {",
+    "  return html`<${1:div}>${2:${TM_FILENAME_BASE/[^a-z-]//gi} works!}</${1:div}>`;$0",
+    "}",
+    ""
+  ],
+  "description": "Lit Web Component Lifecycle: render() in JavaScript"
+ },
+ "Lit Web Component Internal Reactive State": {
+  "prefix": "litwcinternalstate",
+  "body": [
+    "_${1:active}: { type: ${2:Boolean}, state: ${3:true} }$0"
+  ],
+  "description": "Lit Web Component Internal Reactive State in JavaScript"
+ },
+  "Lit Web Component Getter": {
+  "prefix": "litwcgetter",
+  "body": [
+    "get ${1:_myElement}() {",
+    "  return ${2:this.renderRoot.${3:querySelector}('$0')};",
+    "}"
+  ],
+  "description": "Lit Web Component Getter in JavaScript"
+ },
+ "Lit Web Component Method": {
+  "prefix": "litwcmethod",
+  "body": [
+    "${1:_onClick}(${2:event}) {",
+    "  console.log('${1:_onClick} invoked!', ${2:event});$0",
+    "}"
+  ],
+  "description": "Lit Web Component Method in JavaScript"
+ }
+}
