@@ -5,6 +5,10 @@
   "license": "MIT",
   "publisher": "brysonbw",
   "icon": "icons/lit-component-snippets-icon.png",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/brysonbw/vscode-lit-component-snippets"
+  },
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.102.0"
